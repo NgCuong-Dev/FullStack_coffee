@@ -38,15 +38,15 @@ auth.verifyToken.unless = unless;
 //     saveUninitialized: true,
 //   })
 // );
-app.use("/api/v1/auth", require("./routes/auth.routes"));
-app.use("/api/v1/user", require("./routes/user.routes"));
-app.use("/api/v1/comment", require("./routes/comment.routes"));
-app.use("/api/v1/contact", require("./routes/contact.routes"));
-app.use("/api/v1/message", require("./routes/message.routes"));
-app.use("/api/v1/product", require("./routes/product.routes"));
-app.use("/api/v1/category", require("./routes/category.routes"));
-app.use("/api/v1/order", require("./routes/order.routes"));
-app.use("/api/v1/payment", require("./routes/payment.routes"));
+app.use("/api/auth", require("./routes/auth.routes"));
+app.use("/api/user", require("./routes/user.routes"));
+app.use("/api/comment", require("./routes/comment.routes"));
+app.use("/api/contact", require("./routes/contact.routes"));
+app.use("/api/message", require("./routes/message.routes"));
+app.use("/api/product", require("./routes/product.routes"));
+app.use("/api/category", require("./routes/category.routes"));
+app.use("/api/order", require("./routes/order.routes"));
+app.use("/api/payment", require("./routes/payment.routes"));
 app.get("/", (req, res) => {
   res.json({ msg: "Welcome to my API shopping" });
 });

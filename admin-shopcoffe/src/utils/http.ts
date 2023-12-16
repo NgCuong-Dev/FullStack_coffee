@@ -29,7 +29,7 @@ class Http {
 
     this.instance.interceptors.response.use((response) => {
       const { url } = response.config
-      if (url === '/v1/auth/login') {
+      if (url === '/auth/login') {
         const dataProfile = response
         const newUser = omit(dataProfile.data.user, ['password'])
         this.accessToken = response.data.token

@@ -21,7 +21,7 @@ export default function LienHe() {
       email: emailInput,
       content: formData.get('content'),
     }
-  fetch('http://localhost:4001/api/v1/contact/create', {
+  fetch('http://localhost:4001/api/contact/create', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

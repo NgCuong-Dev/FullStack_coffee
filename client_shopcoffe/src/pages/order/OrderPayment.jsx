@@ -63,7 +63,7 @@ export const OrderPayment = () => {
     timeout: 4000,
   });
   useEffect(() => {
-    fetch("http://localhost:4001/api/v1/payment/get-payment")
+    fetch("http://localhost:4001/api/payment/get-payment")
       .then((response) => response.json())
       .then((data) => {
         setPayments(data.payments);
@@ -81,7 +81,7 @@ export const OrderPayment = () => {
         console.log(formState);
         const jsonData = JSON.stringify(formState);
         const response = await axiosInstance.post(
-          "http://localhost:4001/api/v1/order/create",
+          "http://localhost:4001/api/order/create",
           jsonData,
           {
             headers: {

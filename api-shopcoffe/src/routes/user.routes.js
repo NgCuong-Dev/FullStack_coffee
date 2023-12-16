@@ -22,7 +22,10 @@ router.post(
   authAdmin,
   userController.registerByAdmin
 );
-router.get("/get-all-staff", verifyToken, authAdmin, userController.getAllUser);
+router.get("/get-all-staff", 
+  // verifyToken,
+  // authAdmin,
+userController.getAllUser);
 router.get("/search-staff", verifyToken, authAdmin, userController.searchStaff);
 router.delete("/:userId", verifyToken, authAdmin, userController.deleteStaff);
 router.patch(

@@ -152,7 +152,7 @@ export const Payment = () => {
       try {
         const jsonData = JSON.stringify(formState);
         const response = await axiosInstance.post(
-          "https://api-coffe.onrender.com/api/v1/order/create",
+          "https://api-coffe.onrender.com/api/order/create",
           jsonData,
           {
             headers: {
